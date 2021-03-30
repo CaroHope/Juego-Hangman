@@ -1,6 +1,7 @@
 '''
 Descripcion: Programa Principal en el que se puede jugar al Ahorcado.
-             Tiene como Back-Office "ilustracion.py".
+             Tiene como Back-Office "ilustracion.py". Usa un
+             archivo "palabras.txt" para palabras aleatorias.
              Ejecute este programa aqui
 
 Autor: Evelyn Carolina Jorge
@@ -14,14 +15,14 @@ import time
 from ilustracion import *
 
 
-#Leer archivo
+#Leer archivo ======
 archivoll = 'palabras.txt'
 with open(archivoll) as archivo:
     lines = archivo.readlines()
     lines = list(lines)
 
 
-#Inicio Juego---------
+#Inicio Juego ========
 
 print("Hola, Vamos a Jugar!")
 print(" ")
@@ -50,8 +51,13 @@ while intentos>0:
         vida(fallas)
         break
 
-    #Aqui se introduce la letra.
-    letranew = input("introduce una letra: ") 
+    #Aqui se introduce la letra ======
+    letranew = input("introduce una letra: ")
+    try:
+        letranew = str(letranew)
+    except ValueError:
+        print("Introduce letras (a-z)")
+        
     palabraUsuario += letranew
 
     if letranew not in palabra:

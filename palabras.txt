@@ -18,3 +18,7 @@ tenedor
 olla
 sarten
 cuchillo
+florero
+esperanza
+fe
+gozo

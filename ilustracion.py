@@ -60,7 +60,7 @@ faMuerte = '''
 '''
 
 
-#.. Funciones del Ahorcado ..
+# Funciones del Ahorcado ======
 
 import time
 
@@ -80,12 +80,12 @@ def dibujo(x):
         print(fa3)
 
 
-#Funcion de Tristeza
+#Funcion de Tristeza ======
 def muerte(intentos):
     if intentos == 0:
         print(faMuerte)
 
-#Funcion de Alegria
+#Funcion de Alegria =======
 def vida(fallas):
     if fallas == 0:
         print(faYes)
